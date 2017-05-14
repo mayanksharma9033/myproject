@@ -1,0 +1,29 @@
+<%= render 'shared/page_title', title: @post.name %>
+
+<div class="row">
+<div class="col-md-4 pull-right center">
+<%= gravatar_for @post.user, size: 150 %>
+<p>
+<h5>created by: <%= @post.user.name %></h5>
+</p>
+</div>
+<div class="col-md-8">
+   <%=link_to "Edit Post",edit_post_path(@post), class: "btn btn-success pull-right" %>
+
+	<h3><%= @post.summary %></h3>
+	<div class="well">
+		<p>
+		<strong>Comments:</strong>
+		</p>
+		<%= simple_format(@post.description) %>
+	</div>
+</div>
+</div>
+
+
+
+
+<h5><%= link_to "Return to Posts", posts_path, class: "btn btn-warning btn-small" %></h5>
+
+
+

@@ -2,6 +2,10 @@
 @import "bootstrap";
 
 
+h1{
+	text-align:center;
+}
+
 .navbar{
 	margin-bottom: 0;
 	background-color: #f4511e;
@@ -13,6 +17,7 @@
 	border-radius: 0;
 	font-family: Montserrat, sans-serif;
 
+
 }
 
 .link, .navbar  .navbar-brand {
@@ -21,7 +26,7 @@
 }
 .navbar-default .navbar-toggle {
 	 border-color: transparent;
-	 color: #fff !important
+	 color: #fff !important;
 }
 
 .jumbotron{
@@ -29,10 +34,13 @@
 	color:#fff;
 	padding:100px 25px;
 	font-family:Montserrat, sans-serif;
+	margin:-50px;
 }
 .container-fluid{
 	padding:60px 50px;
 }
+
+
 
 h4{
 	font-size: 19px;
@@ -49,3 +57,33 @@ h4{
       font-weight: 600;
       margin-bottom: 30px;
  }
+
+
+
+ .gravatar{
+   border-radius: 10px;
+ }
+
+ .user_info{
+	margin-top:10px;
+	margin-left:40px;
+}
+
+body{
+	margin-top:100px;
+}
+.well{
+	background-color:#EDEDED;
+}
+
+input,textarea,select, .uneditable-input{
+	width:100%;
+	border:1 px solid #d2d2d2;
+	border-radius:5px;
+	margin-bottom:15px;
+}
+
+input{
+	
+	height: auto !important;
+}

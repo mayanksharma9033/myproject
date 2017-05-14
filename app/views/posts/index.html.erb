@@ -1,0 +1,26 @@
+<h5><%= link_to "New Post", new_post_path, class: "btn btn-warning btn-small" %></h5>
+
+
+<%=render 'shared/page_title', title: "All Posts" %>
+
+<% @posts.each do |post| %>
+ <div class="row">
+ <div class="col-md-2">
+ <section class="user_info  center">
+ <h5>User name: <%= post.user.name %></h5>
+ </section>
+ </div>
+
+ <div class="col-lg-8  well">
+ <h4><%= link_to post.name, post_path(post) %></h4>
+ <p><%=link_to post.summary %></p>
+ <p>
+ <span class='quiet'><small> <%= time_ago_in_words(post.created_at)%>ago</small></span>
+ </p>
+
+
+
+ </div>
+ </div>
+
+<%end%>
