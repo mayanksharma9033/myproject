@@ -6,4 +6,8 @@ Rails.application.routes.draw do
    get '/home', to:'pages#home'
 
    resources :posts
+
+   resources :users, except: [:new]
+
+   get '/register', to: 'users#new'
 end

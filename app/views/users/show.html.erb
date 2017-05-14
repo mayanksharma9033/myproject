@@ -1,0 +1,23 @@
+<%=render 'shared/page_title', title: "User:"+@user.name %>
+
+<div class="row">
+<div class="col-md-4 col-md-offset-4 center">
+<%= gravatar_for @user, size: 200 %>
+<hr/>
+</div>
+</div>
+
+
+ <% @user.posts.each do |post| %>
+<div class="row">
+ <div class="col-lg-6 well col-lg-offset-3">
+    <h4><%= link_to post.name, post_path(post) %></h4>
+    <p><%= post.summary %></p>
+    <p>
+    <span class='quiet'><small>created:<%= time_ago_in_words(post.created_at) %> ago,</small></span>
+    <span class='quiet'><small>updated:<%= time_ago_in_words(post.updated_at) %> ago</small></span>
+    </p>
+ </div>
+ </div>
+<%end%>
+
