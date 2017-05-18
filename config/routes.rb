@@ -10,4 +10,10 @@ Rails.application.routes.draw do
    resources :users, except: [:new]
 
    get '/register', to: 'users#new'
+
+   get '/login', to: "logins#new"
+   get '/login', to: "logins#create"
+   get '/logout', to: "logins#destroy"
+
+   
 end
